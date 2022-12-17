@@ -1,0 +1,863 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: "Nunito", sans-serif;
+}
+.onHover {
+  display: none;
+}
+.bottom div:hover .onHover {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100%;
+  left: -80px;
+  padding: 5px;
+  background-color: black;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  z-index: 5;
+}
+.onHovers {
+  display: none;
+}
+.bottom div:hover .onHovers {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100%;
+  padding: 5px;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  z-index: 5;
+}
+.onHover h1 {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+.onHover > button {
+  cursor: pointer;
+  font-size: 15px;
+  width: max-content;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: red;
+}
+.onHovers > button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100px;
+}
+.onHovers h4 {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: white;
+  padding: 5px;
+  width: max-content;
+  color: orangered;
+}
+/* Navbar styling */
+.searchitem {
+  position: absolute;
+  padding: 0px 50px;
+  background-color: white;
+  color: black;
+  z-index: 5;
+  width: max-content;
+}
+.searchitem > li {
+  font-size: 18px;
+  font-weight: bold;
+  list-style-type: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.cartitemno {
+  position: absolute;
+  top: -14px;
+  left: 7px;
+  font-size: 15px;
+}
+.orderitemno {
+  position: absolute;
+  top: -14px;
+  left: 12px;
+  font-size: 15px;
+}
+.navbar {
+  color: white;
+  background-color: black;
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+}
+.navbar .top {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  flex-direction: row;
+}
+.top > .logo {
+  cursor: pointer;
+  font-size: 24px;
+  position: relative;
+  font-weight: bold;
+  display: flex;
+  place-items: center;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: rgb(246, 243, 243);
+  padding: 5px 10px;
+}
+.top > .search {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+  position: relative;
+  border: 2px solid rgb(238, 180, 20);
+  width: 60%;
+}
+.search select {
+  padding: 5px;
+  cursor: pointer;
+  height: 100%;
+  width: min-content;
+  font-size: 16px;
+  font-weight: bold;
+}
+.search input {
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.search > .searchbtn {
+  position: absolute;
+  right: 0;
+  display: flex;
+  place-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.navbar .top > .bottom {
+  position: relative;
+  display: flex;
+  font-weight: bold;
+  flex-direction: row;
+  width: max-content;
+  padding: 5px 26px;
+  border-radius: 8px;
+  display: flex;
+  gap: 20px;
+}
+.bottom > div {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.bottom div:hover {
+  color: rgba(0, 255, 4, 0.968);
+}
+.bottom div > span {
+  font-size: 20px;
+}
+.bottom div > label {
+  font-size: 12px;
+  font-weight: bold;
+}
+/* Homeproduct styling */
+.Homeproduct {
+  position: relative;
+  width: 100%;
+}
+.Homeproduct > .imgoffer {
+  position: relative;
+  z-index: 1;
+}
+.imgoffer > img {
+  object-fit: cover;
+}
+.incdrc_section {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(rgba(255, 255, 255, 0), white);
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+.incdrc_section > div {
+  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  place-items: center;
+  height: 301px;
+  border: solid transparent;
+}
+.incdrc_section > div:hover {
+  border: solid rgb(0, 242, 255);
+  transition: 1s;
+}
+.productbycatogery {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 302px;
+  z-index: 5;
+}
+.productbycatogery > .singlediv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+  width: 320px;
+}
+.singlediv:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.singlediv > img {
+  cursor: pointer;
+  width: 350px;
+  height: 200px;
+}
+.singlediv > h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.Homeproduct > .mall {
+  position: relative;
+  bottom: 300px;
+}
+.mall {
+  position: relative;
+  width: 100%;
+}
+.mall > .topmall {
+  background-color: black;
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+.topmall > h1 {
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.topmall > h4 {
+  cursor: pointer;
+  display: flex;
+  place-items: center;
+  color: rgb(255, 21, 0);
+}
+.mallproducts {
+  position: relative;
+  padding: 10px;
+  height: max-content;
+  margin-top: 10px;
+  justify-content: space-around;
+  display: flex;
+}
+.mallproduct {
+  height: max-content;
+  width: 200px;
+}
+.mallproduct:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
+}
+.mallproduct > img {
+  object-fit: contain;
+  width: 200px;
+  height: 200px;
+}
+.mallproduct > h2 {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.foryou {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  bottom: 265px;
+  flex-direction: column;
+}
+.foryou > .top {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+.foryou > .top > h1 {
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.foryou > .down {
+  display: flex;
+  padding: 5px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.foryou > .down > .product {
+  padding: 10px;
+  margin: auto;
+  height: max-content;
+  width: 215px;
+}
+.foryou > .down > .product:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
+}
+.name {
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.discount {
+  font-size: 14px;
+}
+.discount > .cut {
+  text-decoration: line-through;
+}
+.price {
+  color: rgba(255, 64, 0, 0.897);
+  font-size: 20px;
+}
+.foryou > .down > .product > img {
+  object-fit: contain;
+  width: 210px;
+  height: 200px;
+}
+/* footer styling */
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 450px;
+  padding: 10px 20px;
+}
+.footer > .top {
+  display: flex;
+  gap: 150px;
+}
+.footer > .top > .payment,
+.followus {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.followus > div {
+  display: flex;
+  place-items: center;
+}
+.followus > div:hover {
+  cursor: pointer;
+  color: red;
+}
+.uslogo {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.payment > div {
+  cursor: pointer;
+  border: none;
+  color: black;
+  background-color: white;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  place-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 150px;
+}
+.payment > div > img {
+  object-fit: cover;
+}
+.footer h1 {
+  font-size: 19px;
+  font-weight: bold;
+}
+.footer .down {
+  position: absolute;
+  bottom: 0;
+}
+
+/* comment styling */
+.contacts {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(16, 16, 95);
+  display: flex;
+  flex-direction: column;
+}
+.contacts > .contact {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  width: max-content;
+}
+.contact > h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contact .user > div,
+.comment {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.contact > .user {
+  display: flex;
+  gap: 10px;
+}
+.user > div > input {
+  width: 250px;
+}
+.contact input,
+textarea {
+  padding: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+}
+.contact > button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+  border: none;
+}
+.contact > button:hover {
+  background-color: rgb(13, 204, 13);
+}
+/* Individual product styling */
+.Individualproduct {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 40px;
+}
+.Individualproduct > .img > img {
+  width: 400px;
+  height: 300px;
+  object-fit: contain;
+}
+.Individualproduct > .info {
+  display: flex;
+  width: 600px;
+  gap: 10px;
+  flex-direction: column;
+}
+.info > .TTitle {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.info > .quantity {
+  display: flex;
+  gap: 15px;
+}
+.quantity > button {
+  padding: 5px;
+  width: 40px;
+  border: none;
+  color: rgba(0, 0, 0, 0.473);
+  cursor: pointer;
+  font-size: 15px;
+  background-color: rgba(128, 128, 128, 0.212);
+  font-weight: bold;
+}
+.quantity > button:hover {
+  color: black;
+}
+
+.addsection {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.addsection > button {
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+.addsection > .cart {
+  background-color: orange;
+}
+/* cart styling */
+.carttt > .emptycart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  max-width: 1024px;
+  justify-content: center;
+  margin: auto;
+  gap: 20px;
+  place-items: center;
+}
+.emptycart > button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: green;
+  color: white;
+  border: none;
+}
+.emptycart > button:hover {
+  color: rgb(172, 170, 170);
+}
+.carttt {
+  position: relative;
+  width: 100%;
+}
+.cartorder {
+  position: relative;
+  margin: auto;
+
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+}
+.cartorder > .left {
+  flex: 1;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(128, 128, 128, 0.164);
+  height: max-content;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cartorder > .left > button {
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: orange;
+  color: white;
+}
+.cartorder > .left > .subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+.cartorder > .right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 3;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.297);
+}
+/* cartitem styling */
+.cartitem {
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  justify-content: space-between;
+  place-items: center;
+}
+.cartitem > .img > img {
+  width: 200px;
+}
+.cartitem > .nameeee {
+  width: 200px;
+}
+.closed {
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
+.closed:hover {
+  transform: rotate(27deg);
+}
+.sm {
+  font-size: 10px;
+  color: grey;
+  text-align: right;
+}
+/* checkout styling */
+.Deliverinfo {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.Deliverinfo input {
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+.warnning {
+  font-size: 14px;
+  color: green;
+}
+.checkoutlist {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}
+.checkoutlist > .picture > img {
+  width: 150px;
+}
+.Down {
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.741);
+  padding: 10px;
+}
+
+/* user Auth styling */
+.userauth {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.userauth > .auth {
+  background-color: rgba(128, 128, 128, 0.356);
+  padding: 10px 15px;
+  margin: auto;
+  width: 350px;
+}
+.auth > h1 {
+  width: max-content;
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.inputfield > button {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0;
+  cursor: pointer;
+  color: white;
+  background-color: orange;
+  border: none;
+}
+.inputfield > button:hover {
+  background-color: rgba(255, 166, 0, 0.781);
+}
+.inputfield {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.inputfield > input {
+  margin: 5px 0;
+  outline: none;
+  padding: 5px;
+  border: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+.signup {
+  margin-top: 20px;
+  cursor: pointer;
+  color: blue;
+}
+/* searched product by category */
+.searchedproduct > .rightproduct {
+  position: relative;
+  padding: 15px;
+  border-top:1px solid;
+  display: flex;
+  gap: 10px;
+}
+.rightproduct > .right {
+  border-left: 1px solid;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 4;
+}
+.rightproduct > .right> .items{
+  height: max-content;
+  width: 250px;
+  background-color: rgba(128, 128, 128, 0.242);
+  margin: 20px auto;
+  border-radius: 0px 0px 10px 10px;
+}
+.productbg {
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.productbg:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
+}
+.dispercent {
+  border: none;
+  background-color: red;
+  font-size: 12px;
+  border-radius: 50% 0px 0px 50%;
+  color: white;
+  padding: 2px;
+  float: right;
+}
+.itemname ,.itemprice ,.itemrating{
+   margin: 10px;
+}
+.Searchedbtns{
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px;
+  display: flex;
+}
+.Searchedbtns>div{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.744);
+  color: white;
+  width: max-content;
+  padding: 5px 10px;
+}
+.rightproduct > .left {
+  position: sticky;
+  display: flex;
+  height: max-content;
+  flex-direction: column;
+  padding: 10px;
+  top: 0;
+  flex: 1;
+}
+.rightproduct > .left> select {
+ padding: 10px;
+ font-size: 20px;
+ font-weight: 500;
+}
+.rightproduct > .left> select > option{
+  cursor: pointer;
+}
+.rightproduct > .left>.opt>span{
+  float: right;
+}
+.givemb{
+  margin-bottom: 20px;
+}
+.Noproduct{
+    color: red;
+    margin: auto;
+}

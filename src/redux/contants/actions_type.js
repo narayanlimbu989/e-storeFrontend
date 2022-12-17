@@ -1,0 +1,5 @@
+export const Actiontype={
+    SET_PRODUCT: "SET_PRODUCT",
+    SELECTED_PEODUCT:"SELECTED_PEODUCT",
+    SEARCH_BY_OPT:"SEARCH_BY_OPT"
+}
